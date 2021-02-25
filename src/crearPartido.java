@@ -9,13 +9,18 @@ public class crearPartido extends javax.swing.JFrame
     
     private Apuesta v;
     
-   
+   /**
+    * Metodo sin parametros,utilizado para inicializar
+    */
     public crearPartido() 
     {
         initComponents();
     }
 
-   
+   /**
+    * Metodo para crear el partido y nos muestre la ventana donde vamos a realizar la apuesta
+    * @param ventana Ventana donde hacemos la apuesta
+    */
     public crearPartido(Apuesta ventana) 
     {
         initComponents();
@@ -70,17 +75,28 @@ public class crearPartido extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metodo para añadir los partidos sobre los que vamos a apostar
+     * @param p Partidos de la apuesta
+     */
     public void añadePartido(String p)
     {
         v.partidoNuevo(p);
         tPartido.setText("");
         tPartido.requestFocus();
     }
-    
+    /**
+     * 
+     * @param evt 
+     */
     private void bAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarPartidoActionPerformed
         añadePartido(tPartido.getText());
     }//GEN-LAST:event_bAgregarPartidoActionPerformed
-
+    
+    /**
+     * 
+     * @param evt 
+     */
     private void tPartidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPartidoKeyPressed
         if( evt.getKeyCode() == KeyEvent.VK_ENTER )
         {
